@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('unit tests') {
       steps {
-        sh 'echo \'unit tests...\''
+        sh 'echo \'Running unit tests...\''
       }
     }
     stage('integration') {
       parallel {
         stage('integration') {
           steps {
-            sh 'echo \'integration\''
+            sh 'echo \'Running integration tests \''
           }
         }
         stage('ui') {
